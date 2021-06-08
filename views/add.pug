@@ -1,17 +1,19 @@
 extends layout
 block content
-  h1= title
+  h1.text-center= title 
+  a.btn.btn-success(href='/reg/regis') Adminstator qo'shish
   form(action="" method="POST"   enctype="multipart/form-data"  )
-      input(type="text" name="title" placeholder="Mahsulotning nomi")
-      input(type="text" name="price" placeholder="Mahsulotning narxi")
-      input(type="text" name="sale" placeholder="Mahsulotning chegirmasi")
+      input(type="text" name="title" placeholder="Avtomobining nomi")
+      input(type="text" name="price" placeholder="Avtomobining narxi")
+      input(type="text" name="sale" placeholder="Avtomobining chegirmasi")
+      input(type="Number" name="count" placeholder="Avtomobining soni")
       select(name="category")
-          option(value="car") car
-          option(value="phone") phone
-          option(value="clothes") clothes
-          option(value="books") books
-          option(value="job") job
-      input(type="file" name="photo" placeholder="Mahsulotning rasmi")
+          option(value="Mercedez-Bens") Mercedez-Bens
+          option(value="Audi") Audi
+          option(value="Ford") Ford
+          option(value="Chevrolet") Chevrolet
+          option(value="Volvo") Volvo
+      input(type="file" name="photo" placeholder="Avtomobining rasmi")
       textarea(name="comments", cols="30", rows="10")
 
       button.btn-danger Jonatish

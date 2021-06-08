@@ -17,6 +17,9 @@ const DbProduct = new Schema({
     category: {
         type: String,   
     },
+    count: {
+        type: Number,   
+    },
     dateNow : {
         type: Date,
         default: Date.now

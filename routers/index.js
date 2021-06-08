@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
     let query = {}
     let page = 1
-    let pagesize = 2
+    let pagesize = 6
 
     if(req.query.page != null){
         page =  req.query.page 

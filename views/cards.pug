@@ -1,14 +1,13 @@
 extends layout
 block content
  h1= title
- h2 Reklamaning muallifi :
- h3= names.name 
+ h2 Avtomobilni o'yxatga olgan Adminstrator :#{names.name} 
  .container
     .row
        .col-8
             .product 
                 .product_imgs
-                    img(src= '/'+db.photo , alt="")
+                    img(src= '/'+db.photo , alt="" style="object-fit: contain;object-position: 50% 50%;min-height:60px")
                     p.saleing= db.sale
                         | %
                 h2= db.title
@@ -24,4 +23,4 @@ block content
                     p.category= db.category
             if user
              if user.id ==  names.id
-                a(href="/productd/edit/"+db.id class='btn btn-success mt-5') Ozgartirish
+                a(href="/productd/edit/"+db.id class='btn btn-success mt-5') Avtomobil Parametrlarini o'zgartirish

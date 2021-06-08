@@ -5,7 +5,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-danger
             ul.navbar-nav.mr-auto
                if user     
                  li.nav-item
-                    a.nav-link(href='/productd/add') Mahsulot qoshish sahifasi
+                    a.nav-link.text-light(href='/productd/add') Admin panelga o'tish
             form(action="/search" class='search')
                 input(type="text" name="search" placeholder="Nima topish kerak")
                 button Qidirish 
@@ -23,9 +23,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-danger
             ul.navbar-nav.mr-auto
              if user 
                 li.nav-item
-                    a.nav-link(href='/logout') LogOut
+                    a.nav-link(href='/logout') Tizimdan chiqsh
              else
                 li.nav-item
-                    a.nav-link(href='/reg/regis') Register
-                li.nav-item
-                    a.nav-link(href='/login/log') Login                
+                    a.nav-link(href='login/log') Tizimga kirish 

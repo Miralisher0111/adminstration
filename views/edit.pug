@@ -1,0 +1,19 @@
+extends layout
+block content
+  h1.text-center= title 
+  form(action="" method="POST"   enctype="multipart/form-data"  )
+      input(type="text" name="title" value=`${db.title}` placeholder="Avtomobilning nomi")
+      input(type="text" name="price" value=`${db.price}` placeholder="Avtomobilning narxi")
+      input(type="text" name="sale" value=`${db.sale}` placeholder="Avtomobilning chegirmasi")
+      input(type="Number" name="count" value=`${db.count}` placeholder="Avtomobilning soni")
+      select(name="category")
+          option(value=`${db.title}`) #{db.title}
+          option(value="Mercedez-Bens") Mercedez-Bens
+          option(value="Audi") Audi
+          option(value="Ford") Ford
+          option(value="Chevrolet") Chevrolet
+          option(value="Volvo") Volvo
+      input(type="file" name="photo" placeholder="Avtomobilning rasmi")
+      textarea(name="comments", value=`${db.comments}` cols="30", rows="10")
+
+      button.btn-danger Jonatish

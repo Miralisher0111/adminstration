@@ -1,4 +1,4 @@
 module.exports = {
-    db: 'mongodb+srv://user:asd456asd789@cluster0.sgb1a.mongodb.net/test',
+    db: 'mongodb://localhost:27017/adminstration_car',
     secret: 'secretkey'
 }

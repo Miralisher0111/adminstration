@@ -20,7 +20,7 @@ const def = (req  ,  res , next) => {
 router.get('/productd/add' , def ,  (req  ,res) => {
     
     res.render('add' , {
-        title: 'Mahsulot qoshish sahifasi',
+        title: 'Avtomobil qo\'shish saxifasi',
 
     })
 })
@@ -80,10 +80,10 @@ router.post('/productd/edit/:Userid' , multer , def ,  (req  ,res) => {
     const db  =  {
         title : req.body.title.toLowerCase(),
         price : req.body.price,
- 
         category : req.body.category,
         comments : req.body.comments,
         sale : req.body.sale,
+        count:req.body.count,
         photo : req.file.path
     }
     const ids =  {_id : req.params.Userid}
@@ -126,8 +126,8 @@ router.get('/productd/edit/:id', def ,  (req, res) => {
             req.flash('danger' , 'Yol yoq')
             res.redirect('back')
         }
-        res.render('add', {
-            title: 'cards sahifa',
+        res.render('edit', {
+            title: 'Avtomobilni parametrlarini yangilash',
             db: data,
                  
         })
